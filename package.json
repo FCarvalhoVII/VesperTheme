@@ -1,0 +1,37 @@
+{
+  "name": "vesper-theme",
+  "displayName": "Vesper Theme",
+  "description": "A family of maintainable, semantics-first dark color themes for Visual Studio Code.",
+  "version": "1.0.0",
+  "type": "module",
+  "publisher": "vesper-theme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FCarvalhoVII/VesperTheme.git"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Themes"],
+  "keywords": ["theme", "dark theme", "color theme", "vesper"],
+  "files": ["themes", "assets", "README.md", "CHANGELOG.md", "LICENSE"],
+  "contributes": {
+    "themes": [
+      { "label": "Vesper Arcane", "uiTheme": "vs-dark", "path": "./themes/vesper-arcane-color-theme.json" },
+      { "label": "Vesper Manuscript", "uiTheme": "vs-dark", "path": "./themes/vesper-manuscript-color-theme.json" },
+      { "label": "Vesper Nordic", "uiTheme": "vs-dark", "path": "./themes/vesper-nordic-color-theme.json" },
+      { "label": "Vesper Ocean", "uiTheme": "vs-dark", "path": "./themes/vesper-ocean-color-theme.json" }
+    ]
+  },
+  "scripts": {
+    "build": "node src/build/generate-themes.js",
+    "build:check": "node src/build/generate-themes.js --check",
+    "validate": "node scripts/validate-themes.js",
+    "test": "npm run build:check && node --test",
+    "dev": "node --watch src/build/generate-themes.js",
+    "package": "npx @vscode/vsce package",
+    "vscode:prepublish": "npm run build && npm run validate"
+  },
+  "devDependencies": {}
+}
