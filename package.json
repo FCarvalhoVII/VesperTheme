@@ -4,7 +4,7 @@
   "description": "A family of maintainable, semantics-first dark color themes for Visual Studio Code.",
   "version": "1.0.0",
   "type": "module",
-  "publisher": "vesper-theme",
+  "publisher": "FCarvalhoVII",
   "license": "MIT",
   "repository": {
     "type": "git",
