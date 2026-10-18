@@ -1,0 +1,30 @@
+export function createTokenColors(c) {
+  return [
+    { name: "Ordinary identifiers", scope: ["variable", "identifier", "variable.other.readwrite", "variable.other.object"], settings: { foreground: c.foreground } },
+    { name: "Comments", scope: ["comment", "punctuation.definition.comment", "string.quoted.docstring"], settings: { foreground: c.comment, fontStyle: "italic" } },
+    { name: "Documentation tags", scope: ["storage.type.class.jsdoc", "entity.name.type.instance.jsdoc", "variable.other.jsdoc"], settings: { foreground: c.foregroundMuted, fontStyle: "italic" } },
+    { name: "Structural keywords", scope: ["keyword", "storage.type", "storage.modifier", "keyword.other.import", "keyword.other.package", "keyword.other.namespace"], settings: { foreground: c.keyword, fontStyle: "" } },
+    { name: "Control flow and behavior", scope: ["keyword.control", "keyword.control.flow", "keyword.control.conditional", "keyword.control.loop", "keyword.control.trycatch", "keyword.control.return", "keyword.control.throw", "storage.modifier.async", "keyword.operator.expression.await"], settings: { foreground: c.keyword, fontStyle: "italic" } },
+    { name: "Functions and methods", scope: ["entity.name.function", "meta.function-call entity.name.function", "support.function", "variable.function", "meta.method-call variable.function"], settings: { foreground: c.function, fontStyle: "" } },
+    { name: "Classes and types", scope: ["entity.name.type", "entity.name.class", "entity.name.struct", "entity.name.interface", "entity.name.enum", "support.type", "support.class", "storage.type.built-in"], settings: { foreground: c.type, fontStyle: "" } },
+    { name: "Parameters", scope: ["variable.parameter", "meta.function.parameters variable", "meta.parameters variable.other.readwrite"], settings: { foreground: c.parameter, fontStyle: "italic" } },
+    { name: "Strings", scope: ["string", "string.quoted", "string.template", "constant.other.symbol"], settings: { foreground: c.string, fontStyle: "" } },
+    { name: "Template interpolation punctuation", scope: ["punctuation.definition.template-expression", "punctuation.section.embedded"], settings: { foreground: c.keyword } },
+    { name: "Numbers and constants", scope: ["constant.numeric", "constant.language", "constant.character", "variable.other.constant", "support.constant", "entity.name.constant"], settings: { foreground: c.constant, fontStyle: "" } },
+    { name: "Regular expressions and special literals", scope: ["string.regexp", "constant.regexp", "string.other.link", "constant.other.color"], settings: { foreground: c.special, fontStyle: "" } },
+    { name: "Operators", scope: ["keyword.operator", "keyword.operator.assignment", "keyword.operator.arithmetic", "keyword.operator.logical", "keyword.operator.comparison"], settings: { foreground: c.keyword } },
+    { name: "Properties and fields", scope: ["variable.other.property", "variable.other.object.property", "meta.object-literal.key", "support.type.property-name"], settings: { foreground: c.foreground } },
+    { name: "Namespaces", scope: ["entity.name.namespace", "entity.name.scope-resolution"], settings: { foreground: c.type } },
+    { name: "Decorators and annotations", scope: ["meta.decorator", "meta.annotation", "punctuation.definition.annotation"], settings: { foreground: c.special } },
+    { name: "Tags", scope: ["entity.name.tag", "punctuation.definition.tag"], settings: { foreground: c.keyword } },
+    { name: "Attributes", scope: ["entity.other.attribute-name"], settings: { foreground: c.parameter, fontStyle: "italic" } },
+    { name: "CSS selectors", scope: ["entity.other.attribute-name.class.css", "entity.other.attribute-name.id.css", "entity.name.tag.css"], settings: { foreground: c.type } },
+    { name: "Markup headings", scope: ["markup.heading", "entity.name.section"], settings: { foreground: c.function, fontStyle: "bold" } },
+    { name: "Markup emphasis", scope: ["markup.italic"], settings: { foreground: c.parameter, fontStyle: "italic" } },
+    { name: "Markup strong", scope: ["markup.bold"], settings: { foreground: c.keyword, fontStyle: "bold" } },
+    { name: "Markup links", scope: ["markup.underline.link", "string.other.link.title"], settings: { foreground: c.info } },
+    { name: "Markup code", scope: ["markup.inline.raw", "markup.fenced_code.block"], settings: { foreground: c.string } },
+    { name: "Invalid and deprecated", scope: ["invalid", "invalid.illegal", "invalid.deprecated"], settings: { foreground: c.error } },
+    { name: "Punctuation", scope: ["punctuation", "meta.brace", "meta.delimiter"], settings: { foreground: c.foregroundMuted } }
+  ];
+}
