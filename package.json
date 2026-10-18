@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "type": "module",
   "publisher": "FCarvalhoVII",
+  "icon": "assets/icon.png",
   "license": "MIT",
   "repository": {
     "type": "git",
