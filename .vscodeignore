@@ -1,8 +1,0 @@
-src/
-scripts/
-test/
-.github/
-.vscode/
-.gitignore
-CONTRIBUTING.md
-package-lock.json
